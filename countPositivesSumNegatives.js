@@ -10,7 +10,7 @@ For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should r
 */
 
 function countPositivesSumNegatives(input) {
-if (input.length>0) {
+if (!input||input.length===0) {
 let result = []
 let count = 0
 let negativeSum = 0
@@ -20,10 +20,8 @@ let negativeSum = 0
     }
     if(input[i]<0) {
       negativeSum +=input[i]
-
     }
   }
-
 result.push(count) 
 result.push(negativeSum)
   return result
