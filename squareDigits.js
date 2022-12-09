@@ -13,3 +13,11 @@ const squareDigits = (num) => {
   return Number(result.join(''));
 };
 console.log(squareDigits(9119));
+
+const squareDigitsMap = (num) => {
+  return String(num)
+    .split('')
+    .map((num) => num ** 2)
+    .join('');
+};
+console.log(squareDigitsMap(9119));
