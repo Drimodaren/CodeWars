@@ -19,11 +19,11 @@
 
 function duplicateCount(text) {
   let textArr = text.toUpperCase().split('');
-  const findDuplicates = textArr.filter((item, index) => textArr.indexOf(item) !== index).join('');
+  const findDuplicates = textArr.filter((item, index) => textArr.indexOf(item) !== index);
   return [...new Set(findDuplicates)].length;
 }
 
-console.log(duplicateCount('abcde'));
+console.log(duplicateCount('aabbcde'));
 console.log(duplicateCount('aabbcde'));
 console.log(duplicateCount('aabBcde'));
 console.log(duplicateCount('indivisibility'));
